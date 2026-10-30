@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#3D2935" />
+  <meta name="description" content="أم حماصة وأبو حماصة — حكايتنا اللي ملهاش آخر. كتاب من القلب إلى كريمة." />
+  <title>أم حماصة وأبو حماصة ♡ Our Little Forever</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <a class="skip-link" href="#mainContent">انتقلي للمحتوى</a>
+
+  <!-- INTRO / DECORATIVE PASSWORD GATE -->
+  <section id="entrance" class="entrance" aria-label="مدخل كتاب حكايتنا">
+    <div class="entrance-glow entrance-glow--one" aria-hidden="true"></div>
+    <div class="entrance-glow entrance-glow--two" aria-hidden="true"></div>
+    <div id="entranceParticles" class="particles" aria-hidden="true"></div>
+
+    <div class="entrance-heading">
+      <span class="eyebrow eyebrow--gold">A LOVE STORY WRITTEN JUST FOR YOU</span>
+      <p>فيه حكاية مختلفة مستنياكي يا كريمة</p>
+    </div>
+
+    <div class="cover-stage">
+      <div id="closedBook" class="closed-book" aria-label="غلاف كتاب أم حماصة وأبو حماصة">
+        <div class="closed-book__leaves" aria-hidden="true"></div>
+        <div class="closed-book__front">
+          <div class="cover-ornament cover-ornament--top" aria-hidden="true">✦ ─── ♡ ─── ✦</div>
+          <div class="cover-inner">
+            <div class="cover-pretitle">AN EXTRAORDINARY LITTLE STORY</div>
+            <div class="cover-rule" aria-hidden="true"></div>
+            <h1>أم حماصة<br /><span>وأبو حماصة</span></h1>
+            <p class="cover-subtitle">حكايتنا اللي ملهاش آخر ♾️</p>
+            <p class="cover-english">Our Little Forever</p>
+            <button id="lockButton" class="lock-button" type="button" aria-label="اضغطي على القفل لفتح الكتاب" title="افتحي قفل الحكاية">
+              <span class="lock-shackle" aria-hidden="true"></span>
+              <span class="lock-heart" aria-hidden="true">♡</span>
+            </button>
+            <p class="cover-tap">المسي القلب وادخلي حكايتنا</p>
+          </div>
+          <div class="cover-bottom">
+            <button id="coverEasterEgg" type="button" class="cover-engraving" title="رسالة مستخبية">M ♡ K</button>
+            <span>EST. 22.11.2023</span>
+          </div>
+          <div class="cover-ornament cover-ornament--bottom" aria-hidden="true">✦ ─── ♡ ─── ✦</div>
+        </div>
+      </div>
+    </div></div>
+    <p class="entrance-footer">Made with all my love, from Abu Hamasa to Karima <span aria-hidden="true">✧</span></p>
+  </section>
+
+  <dialog id="passwordDialog" class="password-dialog" aria-labelledby="passwordTitle">
+    <form id="passwordForm" class="password-form" novalidate>
+      <button type="button" id="closePasswordDialog" class="dialog-close" aria-label="إغلاق">×</button>
+      <span class="modal-ornament" aria-hidden="true">♡</span>
+      <span class="eyebrow">ONLY FOR MY FAVORITE PERSON</span>
+      <h2 id="passwordTitle">الكتاب ده ليكي انت وبس</h2>
+      <p>الكتاب ده مش لأي حد يا ام حماصة ده معمول مخصوص ليكي ❤️</p>
+      <label for="passwordInput">كلمة السر بتاعتنا</label>
+      <div class="password-field">
+        <input id="passwordInput" type="password" placeholder="اكتبي اليوم اللي دنيتي اتولدت فيه" inputmode="numeric" autocomplete="off" required aria-describedby="passwordError" />
+        <button id="togglePassword" type="button" aria-label="إظهار كلمة السر" aria-pressed="false">◉</button>
+      </div>
+      <p id="passwordError" class="password-error" aria-live="polite"></p>
+      <button class="button button--primary button--block" type="submit">افتحي حكايتنا <span aria-hidden="true">♡</span></button>
+      <span class="password-hint">Our little secret, our little forever</span>
+    </form>
+  </dialog>
+
+  <main id="mainContent">
+    <!-- BOOK / DEDICATION / TEN CHAPTERS -->
+    <section id="bookView" class="book-view" aria-label="كتاب حكايتنا" hidden>
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">♡</span>
+          <div><strong>أم حماصة وأبو حماصة</strong><span>OUR LITTLE FOREVER</span></div>
+        </div>
+        <div class="header-actions">
+          <span class="date-chip">22.11.2023</span>
+          <button id="fullscreenButton" class="icon-button" type="button" aria-label="عرض ملء الشاشة" title="ملء الشاشة">⛶</button>
+          <button id="restartButton" class="icon-button" type="button" aria-label="إعادة الكتاب من البداية" title="ابدئي من الأول">↺</button>
+        </div>
+      </header>
+
+      <div class="book-headline">
+        <span id="chapterEyebrow" class="eyebrow">AN OPEN LETTER TO YOU</span>
+        <h2 id="sceneTitle">حكايتنا اللي ملهاش آخر</h2>
+        <p id="sceneSubline">كل صفحة هنا شايلة حتة مني ليكي</p>
+      </div>
+
+      <div class="book-layout">
+        <div class="side-flourish side-flourish--left" aria-hidden="true">✧</div>
+        <div id="bookScene" class="book-scene">
+          <div id="openBook" class="open-book" aria-live="off">
+            <div class="book-spine" aria-hidden="true"></div>
+            <article id="leftPage" class="paper paper--left" aria-label="صفحة الصورة"></article>
+            <article id="rightPage" class="paper paper--right" aria-label="صفحة الحكاية"></article>
+            <div id="flipSheet" class="flip-sheet" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="side-flourish side-flourish--right" aria-hidden="true">✧</div>
+      </div>
+
+      <nav class="book-navigation" aria-label="التنقل بين صفحات الكتاب">
+        <button id="prevButton" type="button" class="nav-button nav-button--prev"><span aria-hidden="true">→</span> الصفحة اللي فاتت</button>
+        <div class="progress-panel">
+          <div id="chapterLabel" class="chapter-label">Dedication · 00 / 10</div>
+          <div class="progress-track" role="progressbar" aria-label="تقدم قراءة الكتاب" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progressBar"><div id="progressFill" class="progress-fill"></div></div>
+          <div id="chapterDots" class="chapter-dots" aria-label="اختيار فصل"></div>
+        </div>
+        <button id="nextButton" type="button" class="nav-button nav-button--next">الصفحة الجاية <span aria-hidden="true">←</span></button>
+      </nav>
+    </section>
+
+    <!-- SEALED LETTER / READER -->
+    <section id="letterView" class="letter-view" aria-label="الجواب الأخير" hidden>
+      <div class="letter-header">
+        <span class="eyebrow eyebrow--gold">A LETTER FROM MY HEART</span>
+        <h2>One Last Thing, My Love...</h2>
+        <p>لسه في كلام كتير جوا قلبي ليكي يا ام حماصة</p>
+      </div>
+      <div id="envelopeStage" class="envelope-stage">
+        <button id="envelopeButton" class="envelope" type="button" aria-label="افتحي الجواب">
+          <span class="envelope-paper" aria-hidden="true"><span>إلى كريمة ♡</span></span>
+          <span class="envelope-back" aria-hidden="true"></span>
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="envelope-front" aria-hidden="true"></span>
+          <span class="wax-seal" aria-hidden="true">M ♡ K</span>
+        </button>
+        <p class="envelope-prompt">دوسي على الظرف يا ام حماصة ♡</p>
+      </div>
+      <article id="loveLetter" class="love-letter" tabindex="-1" hidden>
+        <div class="letter-paper-top"><span>FOR MY KARIMA</span><span>22.11.2023 — ∞</span></div>
+        <div class="letter-glyph" aria-hidden="true">❦</div>
+        <h3>إلى كريمة حبيبة قلبي</h3>
+        <div id="letterContent" class="letter-content" dir="rtl"></div>
+        <div class="letter-signature">من ابو حماصة<br /><small>إلى كريمة حبيبته وام حماصة ❤️</small></div>
+        <div class="letter-actions">
+          <button type="button" id="readAgainButton" class="button button--ghost">اقريه من الاول ↺</button>
+          <button type="button" id="closeLetterButton" class="button button--ghost">اقفلي الجواب</button>
+          <button type="button" id="surpriseButton" class="button button--primary">One More Surprise 🎁</button>
+        </div>
+      </article>
+      <button type="button" id="backToBookButton" class="understated-link">→ ارجعي لآخر صفحة في الكتاب</button>
+    </section>
+
+    <!-- THE UNIVERSE / FINALE -->
+    <section id="universeView" class="universe-view" aria-label="مفاجأة عالمنا" hidden>
+      <div id="universeStars" class="universe-stars" aria-hidden="true"></div>
+      <div class="universe-nebula" aria-hidden="true"></div>
+      <div class="universe-content">
+        <span class="eyebrow eyebrow--gold">THE UNIVERSE IS BIG, BUT MY HOME IS YOU</span>
+        <div class="cosmic-heart" id="cosmicHeart" aria-hidden="true"><div class="constellation-heart">♡</div></div>
+        <h2>من يوم ما بقينا احنا</h2>
+        <div class="universe-date">22.11.2023</div>
+        <p class="universe-date-caption">The Day Our Favorite Story Began.</p>
+        <div class="time-intro">بقالنا سوا</div>
+        <div class="time-counter" id="timeCounter" aria-live="off">
+          <div><strong id="countYears">00</strong><span>سنة</span></div>
+          <div><strong id="countMonths">00</strong><span>شهر</span></div>
+          <div><strong id="countDays">00</strong><span>يوم</span></div>
+          <div><strong id="countHours">00</strong><span>ساعة</span></div>
+          <div><strong id="countMinutes">00</strong><span>دقيقة</span></div>
+          <div><strong id="countSeconds">00</strong><span>ثانية</span></div>
+        </div>
+        <div class="universe-message" dir="rtl">
+          <p>عارفة يا ام حماصة</p>
+          <p>يمكن الكتاب خلص بس حكايتنا لسه مخلصتش</p>
+          <p>لسه في ضحك كتير هنضحكه وذكريات كتير هنعملها وصور كتير هنحطها في كتب تانية</p>
+          <p>ولسه ابو حماصة عنده حب كتير اوي عايز يديهولك</p>
+          <p>دي مش نهاية الحكاية يا كريمة دي مجرد بداية لكل الحاجات الحلوة اللي مستنيانا</p>
+          <p class="message-emphasis">بحبك يا ام حماصة ❤️</p>
+        </div>
+        <h3>Forever Starts With Us ♾️</h3>
+        <button type="button" id="replayButton" class="button button--light">اقري حكايتنا من الاول ❤️</button>
+        <button type="button" id="starEasterEgg" class="secret-star" aria-label="نجمة فيها رسالة مستخبية" title="نجمة ليكي">✦</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- PERSISTENT AUDIO PLAYER -->
+  <aside id="musicDock" class="music-dock" aria-label="مشغل اغنيتنا" hidden>
+    <div id="audioBars" class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="music-meta"><strong>Our Song</strong><small id="musicStatus" role="status" aria-live="polite">جاهزة للتشغيل</small></div>
+    <button id="musicPlayButton" class="music-icon" type="button" aria-label="تشغيل الاغنية" title="تشغيل وإيقاف">▶</button>
+    <button id="musicMuteButton" class="music-icon" type="button" aria-label="كتم الصوت" title="كتم الصوت">♪</button>
+    <label class="sr-only" for="musicVolume">مستوى صوت الاغنية</label>
+    <input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="مستوى صوت الاغنية" />
+  </aside>
+  <audio id="backgroundMusic" preload="metadata" loop playsinline></audio>
+  <script src="script.js" defer></script>
+</body>
+</html>
